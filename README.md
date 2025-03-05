@@ -1,95 +1,86 @@
-# Movie Rental System - PostgreSQL Database
+# Movie Rental Database System
 
-## Project Overview
-
-This project is a PostgreSQL-based Movie Rental System designed to manage movies, customers, rentals, returns, late fees, and movie reviews. The database supports CRUD operations and complex queries to facilitate rental transactions and customer interactions.
+## Overview
+This project is a SQL-based movie rental system designed to manage memberships, rentals, and movie inventory. The system ensures proper handling of rental transactions, membership benefits, and overdue penalties.
 
 ## Features
+- Tracks available copies of movies.
+- Manages memberships with rental limits and discounts.
+- Implements rental and return processes with proper updates.
+- Applies overdue charges based on rental policies.
+- Uses triggers and scheduled jobs for automation.
 
-- ** Membership Management:**  Different membership types with rental limits and fees.
+---
 
-- ** Customer Management:**  Store customer details, memberships, and rental history.
+## Part 1: Database Design & Initial Implementation
+### Requirements
+- **Design and normalize** the database to ensure efficiency.
+- **Create tables** with appropriate constraints (PK, FK, indexes).
+- **Implement triggers** to handle automatic updates, such as `copies_available` when a movie is rented or returned.
+- **Ensure data consistency** using constraints and relationships.
 
-- ** Movie Inventory:**  Maintain details of available movies, genres, and formats.
+### What was done:
+- Designed the schema to support movies, rentals, and memberships.
+- Implemented triggers to manage rental transactions.
+- Created sample data for testing.
+- Defined relationships and constraints to maintain integrity.
 
-- ** Rental & Return Management:**  Track movie rentals, due dates, returns, and overdue charges.
+---
 
-- ** Payment Processing:**  Manage transactions for rentals, purchases, and late fees.
+## Part 2: Enhancements & Operations
+### Requirements
+- Provide **5 DDL** statements for improvements or fixes.
+- Implement **12 SQL operations:**
+  - 2 CREATE statements
+  - 5 READ statements
+  - 3 UPDATE statements
+  - 2 DELETE statements
+- Ensure `copies_available` updates correctly on rentals/returns.
+- Modify membership structure:
+  - Rename `rental_fee` to `membership_rental_discount`.
+  - Basic membership has no yearly fee and a 1-rental limit.
+- Replace `update_rental_status` trigger with a scheduled job for overdue rentals.
+- Define how overdue charges apply (`purchase_fee` or `late_fee`).
+- Prepare a **10-minute presentation** explaining the system.
+- Submit `Project-part2-StudentNo.pdf` by Feb 9, 2025.
 
-- ** Movie Reviews:**  Allow customers to review and rate movies.
+### What was done:
+- Adjusted table structures and relationships based on Part 1 feedback.
+- Replaced the `update_rental_status` trigger with a scheduled job.
+- Ensured proper updates to `copies_available` on rentals and returns.
+- Implemented all required SQL operations.
+- Clarified the application of overdue charges.
+- Created a presentation detailing system design and functionalities.
 
-- ** Automated Status Updates:**  Functions and triggers to handle overdue rentals and charge penalties.
+---
 
+## How the Code Works
+1. **Membership Management:**
+   - Users can sign up for different membership levels.
+   - Membership benefits (rental discounts, limits) are enforced.
 
-## Database Schema
+2. **Movie Rentals:**
+   - Users rent movies, reducing `copies_available`.
+   - Returns update `copies_available` accordingly.
 
-The system includes the following tables:
+3. **Automated Overdue Handling:**
+   - A scheduled job checks for overdue rentals daily.
+   - Overdue charges are applied based on `late_fee`.
 
-- **memberships** - Stores membership plans and rental restrictions.
+4. **SQL Operations Implemented:**
+	- **CREATE:** New members and rental records.
+	- **READ:** Retrieve movie availability, rental history, and customer records.
+	- **UPDATE:** Modify membership details and rental statuses.
+	- **DELETE:** Remove inactive members or expired rental records.
 
-- **customers** - Stores customer information and membership details.
+---
 
-- **genres** - Categorizes movies into different genres.
-
-- **movies** - Stores details about each movie, including format and rental price.
-
-- **rentals** - Tracks rented movies, due dates, return status, and overdue charges.
-
-- **payments** - Stores payment records for transactions.
-
-- **movie_reviews** - Allows customers to rate and review movies.
-
-
-## SQL Scripts
-
-Table Creation: Scripts to define the database schema with constraints and relationships.
-
-Sample Data Insertion: Example data for testing functionalities.
-
-Triggers & Functions:
-
-check_overdue_and_charge() - Applies overdue purchase charges.
-
-update_rental_status() - Marks rentals as 'Overdue' after 14 days.
-
-
-## Queries for Functionalities:
-
-CRUD operations (Add, Update, Delete, View records)
-
-Generate reports on rental income, overdue rentals, popular movies, and customer activity.
-
-## Installation & Setup
-
-Install PostgreSQL.
-
-Create a new database using:
-
-CREATE DATABASE movie_rental;
-
-Run the provided SQL script to create tables and insert sample data.
-
-Execute queries to test functionalities.
-
-Functionalities Implemented
-
-CRUD Operations for customers, movies, rentals, and reviews.
-
-Reports & Queries, including:
-
-List all available movies by genre.
-
-Identify overdue rentals and unpaid late fees.
-
-Calculate total rental income per membership type.
-
-Generate top 5 most rented movies.
-
-Retrieve highly rated movies (8+ rating).
+## Author
+[Melissa :)]
+Course: [Database]
+Date: January 2025
 
 
-
-License
+## 📜 License
 
 This project is open-source and available for educational purposes. Contributions and improvements are welcome!
-

@@ -1,5 +1,6 @@
 /*
-
+	Melissa Louise Bangloy  
+	Database Project Part 1
 */
 
 -- DROP STATEMENTS

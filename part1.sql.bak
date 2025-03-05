@@ -1,4 +1,7 @@
-
+/*
+	Melissa Louise Bangloy  
+	Database Project Part 2
+*/
 
 -- DROP STATEMENTS
 DROP TABLE IF EXISTS memberships CASCADE;
