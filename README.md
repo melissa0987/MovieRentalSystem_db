@@ -74,13 +74,14 @@ This project is a SQL-based movie rental system designed to manage memberships, 
 	- **DELETE:** Remove inactive members or expired rental records.
 
 ---
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+- This project was developed as part of a course assignment. All coding techniques and algorithms were implemented independently.
+- Special thanks to the course instructors for their guidance throughout the development process.
 
 ## Author
-[Melissa :)]
-Course: [Database]
+Melissa :) <br>
+Course: [Database] <br>
 Date: January 2025
-
-
-## 📜 License
-
-This project is open-source and available for educational purposes. Contributions and improvements are welcome!
