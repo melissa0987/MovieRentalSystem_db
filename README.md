@@ -1,9 +1,11 @@
-# MovieRentalSystem_db
+Movie Rental System - PostgreSQL Database
 
-#Project Overview
+Project Overview
+
 This project is a PostgreSQL-based Movie Rental System designed to manage movies, customers, rentals, returns, late fees, and movie reviews. The database supports CRUD operations and complex queries to facilitate rental transactions and customer interactions.
 
-#Features
+Features
+
 Membership Management: Different membership types with rental limits and fees.
 
 Customer Management: Store customer details, memberships, and rental history.
@@ -18,8 +20,7 @@ Movie Reviews: Allow customers to review and rate movies.
 
 Automated Status Updates: Functions and triggers to handle overdue rentals and charge penalties.
 
-
-#Database Schema
+Database Schema
 
 The system includes the following tables:
 
@@ -37,8 +38,7 @@ payments - Stores payment records for transactions.
 
 movie_reviews - Allows customers to rate and review movies.
 
-
-#SQL Scripts
+SQL Scripts
 
 Table Creation: Scripts to define the database schema with constraints and relationships.
 
@@ -55,3 +55,38 @@ Queries for Functionalities:
 CRUD operations (Add, Update, Delete, View records)
 
 Generate reports on rental income, overdue rentals, popular movies, and customer activity.
+
+Installation & Setup
+
+Install PostgreSQL.
+
+Create a new database using:
+
+CREATE DATABASE movie_rental;
+
+Run the provided SQL script to create tables and insert sample data.
+
+Execute queries to test functionalities.
+
+Functionalities Implemented
+
+CRUD Operations for customers, movies, rentals, and reviews.
+
+Reports & Queries, including:
+
+List all available movies by genre.
+
+Identify overdue rentals and unpaid late fees.
+
+Calculate total rental income per membership type.
+
+Generate top 5 most rented movies.
+
+Retrieve highly rated movies (8+ rating).
+
+
+
+License
+
+This project is open-source and available for educational purposes. Contributions and improvements are welcome!
+
